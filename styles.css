@@ -1,0 +1,268 @@
+@font-face {
+  font-family: "Haas";
+  src: url("fonts/NeueHaasDisplayBlack.woff2") format("woff2");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Haas";
+  src: url("./fonts/NeueHaasDisplayMediu.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "interCustom";
+  src: url(/fonts/Inter-Black.woff2);
+  font-style: normal;
+  font-weight: bolder;
+}
+
+@font-face {
+  font-family: "interCustom";
+  src: url(/fonts/Inter-Bold.woff2);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "interCustom";
+  src: url(/fonts/Inter-Medium.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "interCustom";
+  src: url(/fonts/Inter-Regular.woff2);
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "junicode";
+  src: url(/fonts/Junicode.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "junicode";
+  src: url(/fonts/Junicode-Bold.woff2);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "junicode";
+  src: url(/fonts/Junicode-BoldItalic.woff2);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "junicode";
+  src: url(/fonts/Junicode-Italic.woff2);
+  font-weight: normal;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-col: #fcfcfc;
+
+  --white: #fcfcfc;
+  --red: #ee3d38;
+  --black: #181818;
+}
+
+body {
+  font-family: "interCustom", sans-serif;
+  overflow: hidden;
+  color: var(--white);
+  background-color: var(--bg-col);
+}
+
+/* img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+} */
+
+h1 {
+  font-family: "haas";
+  font-size: 6rem;
+  letter-spacing: -0.2rem;
+  line-height: 1;
+}
+
+a,
+p {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 300;
+  user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* end universal rules */
+
+/* start homepage */
+/* navbar */
+
+nav {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5em;
+  color: var(--white);
+  font-family: "interCustom";
+  font-weight: 500;
+}
+
+nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+.navbar-mobile {
+  display: none;
+}
+
+/* end navbar */
+/* start hero section */
+
+.sticker-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  user-select: none;
+  pointer-events: none;
+  z-index: -1;
+  left: 0;
+  display: flex;
+  justify-content: end;
+  padding: 2.5em;
+  align-items: flex-end;
+  bottom: 3em;
+}
+
+.img-nuworld {
+  height: 10em;
+  z-index: -1;
+}
+
+.hero-section {
+  height: 50svh;
+  background-color: var(--black);
+  z-index: 1;
+  width: 100vw;
+  padding: 2.5em 2.5em 0;
+}
+
+.hero-subtitle {
+  font-size: 1.5em;
+  font-family: "interCustom";
+  font: 500;
+}
+.hero-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+
+.hero-title {
+  font-size: 17em;
+}
+
+/* end hero section */
+/* end homepage */
+
+/* start music page */
+
+/* end music page */
+
+/* start media queries */
+
+@media (max-width: 1500px) {
+  .navbar-mobile {
+    display: none;
+  }
+  .hero-title {
+    font-size: 10em;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .navbar-mobile {
+    display: none;
+  }
+  .hero-title {
+    font-size: 7em;
+    letter-spacing: 0;
+  }
+}
+span {
+  color: var(--red);
+}
+
+@media (max-width: 900px) {
+  .hero-title-container {
+    align-items: center;
+  }
+
+  .hero-section {
+    height: 100svh;
+    background-color: var(--red);
+    width: 100vw;
+    padding: 2.5em;
+  }
+
+  span {
+    color: var(--white);
+  }
+
+  .navbar-pc {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: flex;
+  }
+
+  .navbar-mobile ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .img-nuworld {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 3em;
+    letter-spacing: 0;
+  }
+}
