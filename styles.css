@@ -91,6 +91,10 @@ body {
   background-color: var(--bg-col);
 }
 
+.index-body {
+  overflow: hidden;
+}
+
 /* hide page scrollbar */
 html {
   scrollbar-width: none;
